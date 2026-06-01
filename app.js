@@ -20,7 +20,7 @@ function loadChart() {
     .then(function(data) {
       saveStockData(data);
       document.getElementById("status").innerText = "Stock loaded. Loading S&P 500... (wait 15 seconds)";
-      setTimeout(loadSP500, 100);
+      setTimeout(loadSP500, 15000);
     });
 }
 
