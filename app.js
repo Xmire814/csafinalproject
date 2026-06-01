@@ -24,15 +24,12 @@ function loadChart() {
     });
 }
 
-// -------------------------------------------------------
-// STEP 2: Save the stock prices from the API response
-// -------------------------------------------------------
 function saveStockData(data) {
 
   var series  = data["Monthly Adjusted Time Series"];
   var allDates = Object.keys(series).sort();
 
-  // Only keep the last 10 years
+
   stockPrices = [];
   stockDates  = [];
 
@@ -80,7 +77,7 @@ function saveSPData(data) {
 
 function drawChart() {
 
-  // Normalize: divide every price by the first price, multiply by 100
+ 
   var stockNorm = [];
   var spNorm    = [];
 
